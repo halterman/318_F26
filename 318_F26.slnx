@@ -1,7 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="PresemesterRepoTest/PresemesterRepoTest.vcxproj" Id="e1a9f93d-7d32-4043-8fb2-c88f16872c25" />
-</Solution>
