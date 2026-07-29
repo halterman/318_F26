@@ -2,4 +2,4 @@
 
 #include <vector>
 
-int vectorSum(const std::vector<int>& vec);
+int vector_sum(const std::vector<int>& vec);
