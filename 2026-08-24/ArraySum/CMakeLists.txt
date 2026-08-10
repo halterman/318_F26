@@ -12,7 +12,7 @@ set(EXECUTABLE prog)
 
 project(${EXECUTABLE} VERSION 0.1.0 LANGUAGES C)
 
-set(CMAKE_C_STANDARD 17)
+set(CMAKE_C_STANDARD 23)
 set(CMAKE_C_STANDARD_REQUIRED YES)
 
 # Use stricter compiler warnings
@@ -22,7 +22,7 @@ if (MSVC)
     add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
 else()
     # GCC and Clang
-    add_compile_options(-Wall -Wextra -pedantic -Wno-char-subscripts)
+    add_compile_options(-Wall -Wextra -pedantic)
 endif()
 
 file(GLOB SRCS_LIST "*.c" "*.h")
