@@ -5,7 +5,7 @@
 #include "arraysum.h"
 
 const char *arrtostr(const int *arr, int size) {
-    static char buffer[256];
+    static char buffer[256];  // Note: Local static string
     int offset = 0;
     offset += snprintf(buffer + offset, sizeof(buffer) - offset, "[");
     for (int i = 0; i < size; i++) {
