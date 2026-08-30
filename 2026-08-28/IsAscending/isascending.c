@@ -97,7 +97,7 @@ int main(int argc, char* argv[]) {
     printf("%d\n", argc);
     if (argc < 2) {
         printf("-----------------------------------------------------------\n");
-        printf("Vector Size    is_ascending1   is_ascending2        Speedup\n");
+        printf(" Array Size    is_ascending1   is_ascending2        Speedup\n");
         printf("-----------------------------------------------------------\n");
         for (int size = 0; size <= 200'000; size += 10'000) {
             int *arr = malloc(size * sizeof *arr);
