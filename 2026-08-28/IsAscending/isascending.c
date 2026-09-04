@@ -56,12 +56,14 @@ bool is_ascending2(const int *a, int n) {
 }
 
 
+bool ans = 0;
+
 // Document this function
 static double time_it(const int *a, int n, bool (*f)(const int *, int)) {
     struct stopwatch timer;
     sw_reset(&timer);
     sw_start(&timer);
-    f(a, n);
+    ans = f(a, n);
     sw_stop(&timer);
     return sw_elapsed(&timer);
 }
@@ -128,6 +130,7 @@ int main(int argc, char* argv[]) {
         printf("Speed up: %10.2f x\n", t1 / t2);
 		free(arr); // Deallocate array
     }
+    printf("%d\n", ans);
 
 }
 
