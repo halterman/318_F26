@@ -1,6 +1,3 @@
-// RandomPermute.cpp
-// Created 8/23/2018 10:18:47 PM
-
 #include <stdio.h>
 
 #include "randrange.h"
