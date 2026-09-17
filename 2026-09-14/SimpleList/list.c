@@ -41,6 +41,14 @@ void print_list(const Node *p) {
     printf("\n");
 }
 
+void dispose_list(Node *p) {
+    while (p) {
+        Node *temp = p;
+        p = p->next;
+        free(temp);
+    }
+}
+
 int main() {
     Node *head = nullptr;
     head = insert(head, 10);
@@ -49,5 +57,6 @@ int main() {
     head = insert(head, 40);
     head = insert(head, 50);
     print_list(head);
+    dispose_list(head);
         
 }
