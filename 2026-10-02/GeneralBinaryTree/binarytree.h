@@ -1,6 +1,7 @@
 #ifndef BINARYTREE_H_
 #define BINARYTREE_H_
 
+
 // Represents a node in a binary tree of integers
 typedef struct node {
     int data;
