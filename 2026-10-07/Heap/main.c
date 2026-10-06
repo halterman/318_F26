@@ -30,9 +30,18 @@ int main() {
                 printf("\n");
                 heap_draw(heap);
                 break;
+            case 'p':
+            case 'P':
+                heap_print(heap);
+                printf("\n");
+                heap_draw(heap);
+                break;
             case 'q':
             case 'Q':
                 done = true;
+                break;
+            default:
+                printf("Not a valid command\n");
                 break;
         }
     }
