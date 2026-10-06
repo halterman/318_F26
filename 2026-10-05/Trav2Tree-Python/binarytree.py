@@ -32,8 +32,8 @@ def inorder_print(t: TreePtr) -> None:
 def build_from_traversals(pre_order: list[int], pre_begin: int, pre_end: int,
                           in_order: list[int], in_begin: int, in_end: int) -> TreePtr:
     """ Builds a binary tree from its preorder and inorder traversals.
-        pre_order is an array containing is a preorder traversal of a tree.
-        in_order is an array containing is an inorder traversal of a tree.
+        pre_order is an list containing is a preorder traversal of a tree.
+        in_order is an list containing is an inorder traversal of a tree.
         pre_begin is the starting index of the preorder traversal during this recursive call.
         pre_end is just after the last index of the preorder traversal during this recursive call.
         in_begin is the starting index of the inorder traversal during this recursive call.
