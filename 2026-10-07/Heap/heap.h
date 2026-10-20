@@ -20,24 +20,11 @@ bool heap_insert(MinHeap *heap, int item);
 // Result is undefined if the heap is empty.
 int heap_remove(MinHeap *heap);
 
-// Returns true for a successful removal and false if
-// the heap is empty.
-int heap_remove(MinHeap *heap);
-
 // Prints the contents of a min-heap in linear fashion.
 void heap_print(const MinHeap *heap);
 
 // Draws the min-heap as a binary tree.
 void heap_draw(const MinHeap *heap);
-
-// Returns the index of the root of the left subtree of index i.
-int left_child(int i);
-
-// Returns the index of the root of the right subtree of index i.
-int right_child(int i);
-
-// Returns the index of the parent of the entry at index i.
-int parent(int i);
 
 
 #endif
