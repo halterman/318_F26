@@ -36,7 +36,7 @@ int s = 0;
 
 // Document this function
 static double time_it(const int *a, int n, int (*f)(const int *, int)) {
-    struct stopwatch timer;
+    Stopwatch timer;
 
     sw_reset(&timer);
     sw_start(&timer);

@@ -19,13 +19,13 @@
     
 
 // Resets the stopwatch object in preparation for a new timing.
-void sw_reset(struct stopwatch *sw) {
+void sw_reset(Stopwatch *sw) {
 	sw->is_running = false;
     sw->elapsed_time = 0.0;
 }
 
 /** Starts the stopwatch running. */
-void sw_start(struct stopwatch *sw) {
+void sw_start(Stopwatch *sw) {
 	if (!sw->is_running) {
 		sw->is_running = true;
         TIME_STAMP(&sw->start_time);
@@ -36,7 +36,7 @@ void sw_start(struct stopwatch *sw) {
  * Stops the stopwatch; the stopwatch later may be resumed, 
  * but the time while stopped is not counted.
  */
-void sw_stop(struct stopwatch *sw) {
+void sw_stop(Stopwatch *sw) {
 	if (sw->is_running) {
         TIME_STAMP(&sw->stop_time);
         double elapsed = (double)(sw->stop_time.tv_sec - sw->start_time.tv_sec) +
@@ -47,7 +47,7 @@ void sw_stop(struct stopwatch *sw) {
 }
 
 /** Returns the stopwatch's elapsed time in seconds. */
-double sw_elapsed(const struct stopwatch *sw) {
+double sw_elapsed(const Stopwatch *sw) {
 	if (!sw->is_running)
 		return sw->elapsed_time;
 	else
